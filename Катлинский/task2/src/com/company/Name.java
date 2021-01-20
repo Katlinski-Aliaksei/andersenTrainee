@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 public class Name {
 
-    public void setName() {
+    public void scanName() {
 
         Filter f = new Filter();
-        Scanner s = new Scanner(System.in);
+        Console c=new Console();
         String name = null;
         boolean flag = true;
-        System.out.println("Введите имя");
+        c.printConsole("Введите имя");
 
         while (flag) {
-            name = s.nextLine();
+           name = c.inputConsole();
             if (name.matches("[а-яА-Яa-zA-Z]+")) {
                 flag = false;
             } else {
-                System.out.println("Вы ввели некорректное значение имени\n Введите имя еще раз:");
+                c.printConsole("Вы ввели некорректное значение имени\n Введите имя еще раз:");
                 continue;
             }
 

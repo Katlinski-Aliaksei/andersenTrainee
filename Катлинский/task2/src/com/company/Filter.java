@@ -2,12 +2,14 @@ package com.company;
 
 public class Filter {
 
+  private   Console c=new Console();
+
     public void sayHelloSlava(String name) {
 
         if (name.equalsIgnoreCase("Вячеслав"))
-            System.out.println("Привет, Вячеслав");
+            c.printConsole("Привет, Вячеслав");
         else
-            System.out.println("Нет такого имени");
+            c.printConsole("Нет такого имени");
 
     }
 }
